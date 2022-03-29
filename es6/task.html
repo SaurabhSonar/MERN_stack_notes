@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<script>
+    function clock(){
+        d=new Date();
+        hrs=d.getHours();
+        min=d.getMinutes();
+        sec=d.getSeconds();
+        // document.getElementById("watch").innerHTML=hrs+" : "+min+" : "+sec
+        if(hrs>12){
+            hrs=hrs-12
+            document.getElementById("watch").innerHTML=hrs+" : "+min+" : "+sec+" pm"
+        }
+        else
+        {
+            document.getElementById("watch").innerHTML=hrs+" : "+min+" : "+sec+" am" 
+        }
+    }
+    function start(){
+        interval=setInterval(clock,1000);
+    }
+    function stop(){
+         clearInterval(interval);
+    }
+
+</script>
+    </head>
+    <body onload="start()">
+            <p id="watch"></p>
+            <button value="STOP" id="stop" onclick="stop()">STOP</button>
+            <button value="STOP" id="stop" onclick="start()">start</button>
+    </body>
+</html>
