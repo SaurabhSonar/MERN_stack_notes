@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<script>
+     function vali(){
+         var name=document.getElementById("name").value;
+         var mobile=document.getElementById("mobile").value;
+         var expname=/^[a-zA-Z]{2,100}$/;
+         var expMobile=/^[6-9][0-9]{9}$/;
+         if(!(expname.test(name))){
+             document.getElementById("name").focus();
+             alert("only alphabet allow");
+         }
+         else if(!(expMobile.test(mobile))){
+            document.getElementById("mobile").focus();
+             alert("only 10 digit allow");
+         }
+         else{
+             alert("Form Submitted")
+         }
+     }
+     
+</script>
+    </head>
+    <body>
+       Name<input type="text" id="name" >
+       Mobile<input type="text" id="mobile">
+      
+       <input type="submit" id="submit" onclick="vali()">
+
+    </body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<script>
+    function counter(){
+        count++;
+        document.getElementById("timer").innerHTML=count;
+    }
+    function start(){
+        interval=setInterval(counter,1000);
+    }
+    function stop(){
+        clearInterval(interval)
+    }
+    
+</script>
+    </head>
+    <body>
+       Start :<input type="button" id="start" onclick="start()">
+       Stop :<input type="button" id="stop" onclick="stop()">
+    </body>
+</html>
